@@ -1,0 +1,3 @@
+#01-java8-compatibility.patch
+reproducible-build.patch
+java17-compatibility.patch

@@ -1,0 +1,3 @@
+maven/icu4j/pom.xml           --java-lib --set-version=60.2 --artifact=icu4j.jar
+maven/icu4j-charset/pom.xml   --java-lib --set-version=60.2 --artifact=icu4j-charset.jar
+maven/icu4j-localespi/pom.xml --java-lib --set-version=60.2 --artifact=icu4j-localespi.jar

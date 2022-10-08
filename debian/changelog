@@ -1,0 +1,216 @@
+icu4j (68.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed the build failure with OpenJDK 17 (Closes: #981998)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 08 Feb 2021 12:11:06 +0100
+
+icu4j (68.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Removed use-default-doclet.patch
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 05 Jan 2021 22:52:09 +0100
+
+icu4j (62.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Removed the -doc package
+  * Track and download the new releases from GitHub
+  * Switch to debhelper level 13
+  * Standards-Version updated to 4.5.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 05 Jan 2021 15:22:31 +0100
+
+icu4j (62.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Drop the build-dep on default-jdk-doc and the patch to configure JDK
+    API doc links (Closes: #923182)
+  * Bump Standards-Version to 4.3.0
+  * Mark libicu4j-java and libicu4j-java-doc as Multi-arch: foreign
+  * Correct minor typo in package description
+
+ -- tony mancill <tmancill@debian.org>  Sun, 24 Feb 2019 16:00:38 -0800
+
+icu4j (62.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Standards-Version updated to 4.2.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 11 Dec 2018 01:02:05 +0100
+
+icu4j (60.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed the build failure with Java 10 (Closes: #898760)
+  * Standards-Version updated to 4.1.4
+  * Use salsa.debian.org Vcs-* URLs
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 15 May 2018 22:42:05 +0200
+
+icu4j (60.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+    - Disabled the custom taglets to fix the build with Java 9 (Closes: #873217)
+    - Use the upstream poms for icu4j-charset and icu4j-localespi
+  * Disabled doclint when generating the javadoc
+  * Updated debian/watch to track the releases > 58.1
+  * Restored debian/orig-tar.sh and use XZ compression for the upstream tarball
+  * Standards-Version updated to 4.1.3
+  * Switch to debhelper level 11
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 08 Mar 2018 16:20:05 +0100
+
+icu4j (57.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Make build reproducible (Closes: #827985).
+    - Thank you to Chris Lamb for the patch.
+
+ -- tony mancill <tmancill@debian.org>  Fri, 24 Jun 2016 20:47:32 -0700
+
+icu4j (57.1-1) unstable; urgency=medium
+
+  [ tony mancill ]
+  * Remove Niels Thykier from Uploaders. (Closes: #770576)
+
+  [ Kai-Chung Yan ]
+  * Moved the package to Git
+  * New upstream release (Closes: #815137)
+  * Bump Standards-Version to 3.9.8 (no changes)
+  * Add myself to Uploaders
+  * get-orig-source: Download released tarballs instead of checking out SVN
+  * Update d/copyright to the standardized format
+  * Refresh patches
+  * Switch from CDBS to DH sequences
+  * Drop 01-java8-compatibility.patch
+  * New package: libicu4j-java-doc providing Javadoc
+  * New javadoc_local_link.diff: Patch javadoc to link against default-jdk-doc
+  * Remove unzip from Build-Depends
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Sat, 14 May 2016 01:32:20 +0800
+
+icu4j (4.2.1.1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Patched to build with OpenJDK 8
+  * Standards-Version updated to 3.9.5 (no changes)
+  * debian/rules: Improved the clean target
+  * Switch to debhelper level 9
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 10 Apr 2014 00:20:49 +0200
+
+icu4j (4.2.1.1-2) unstable; urgency=low
+
+  * Team upload
+  * Install maven pom (Closes: #722518)
+  * Capitalise Unicode in description (Closes: #568351)
+  * Fix typo in short description (Closes: #639848) (Closes: #643631)
+  * Update Standards-Version: 3.9.4.
+  * Canonicalise Vcs URLs
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Wed, 11 Sep 2013 23:59:36 +0100
+
+icu4j (4.2.1.1-1) unstable; urgency=low
+
+  * Team upload
+  * Newer but not newest upstream version.
+  * Change debian/watch to download from upstream's svn repo.
+  * Remove old patch that is no longer needed.
+  * Switch to cdbs.
+  * Set svn-buildpackage property mergeWithUpstream.
+  * Remove Java runtime from Depends.
+  * Update Standards-Version: 3.9.1.
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 30 Aug 2011 21:37:31 +0200
+
+icu4j (4.0.1.1-1) unstable; urgency=low
+
+  [ Andreas Tille ]
+  * Watch file now detects all versions even for new major
+    version change
+
+  [ Niels Thykier ]
+  * New upstream release.
+    - Added patch to handle hardcoded versions.
+  * Bumped debhelper compat to 7.
+  * Bumped Standards-Version to 3.8.3.
+    - Changed section to java.
+  * Added myself to Uploaders.
+  * Removed eclipse from Build-Depends to avoid circular
+    Build-Dependency (eclipse 3.5 depends on icu4j).
+  * Converted source to 3.0 (quilt).
+  * Bumped version in NEWS to match first affected version
+    released in Debian.
+  * Added a missing ${misc:Depends}.
+
+ -- Niels Thykier <niels@thykier.net>  Thu, 21 Jan 2010 17:15:20 +0100
+
+icu4j (3.8.1-1) unstable; urgency=low
+
+  * Initial upload to Debian
+    Closes: #508777
+  * Maintainer: Debian Java maintainers
+    <pkg-java-maintainers@lists.alioth.debian.org>
+  * Added myself and Steffen Moeller as Uploader
+  * Removed Homepage field from long description
+  * Added VCS fields
+  * Fixed syntax of debian/NEWS file
+
+ -- Andreas Tille <tille@debian.org>  Mon, 15 Dec 2008 09:36:51 +0100
+
+icu4j (3.8.1-0ubuntu1~ppa5) intrepid; urgency=low
+
+  * Update to standards version 3.8.0 (no changes needed.)
+
+ -- Nathan Summers <rock@gimp.org>  Wed, 05 Nov 2008 19:11:27 -0500
+
+icu4j (3.8.1-0ubuntu1~ppa4) hardy; urgency=low
+
+  * Fixed empty jar creation.
+
+ -- Nathan Summers <rock@gimp.org>  Mon, 03 Nov 2008 21:08:44 -0500
+
+icu4j (3.8.1-0ubuntu1~ppa3) hardy; urgency=low
+
+  * Fixed symbolic link.
+
+ -- Nathan Summers <rock@gimp.org>  Mon, 03 Nov 2008 19:31:45 -0500
+
+icu4j (3.8.1-0ubuntu1~ppa2) hardy; urgency=low
+
+  * Fixed install location.
+  * "clean" target now undoes the preprocessor mangling.
+
+ -- Nathan Summers <rock@gimp.org>  Mon, 03 Nov 2008 18:32:27 -0500
+
+icu4j (3.8.1-0ubuntu1~ppa1) hardy; urgency=low
+
+  * New upstream version.
+  * Builds Eclipse-compatible version of jar.
+
+ -- Nathan Summers <rock@gimp.org>  Thu, 25 Sep 2008 18:52:02 -0400
+
+icu4j (3.4.5-1ubuntu1) edgy; urgency=low
+
+  * New upstream release.
+  * Changed rules to use CDBS.
+  * Changed build and runtime dependencies.
+  * Upgraded standards version to 3.7.2.
+
+ -- Vladimír Lapáček <vladimir.lapacek@gmail.com>  Wed, 27 Sep 2006 17:04:02 +0200
+
+icu4j (3.4.4-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Steffen Moeller <steffen_moeller@gmx.de>  Fri,  5 May 2006 19:49:26 +0200
+

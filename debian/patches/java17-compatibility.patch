@@ -1,0 +1,10 @@
+--- a/build.xml
++++ b/build.xml
+@@ -110,6 +110,7 @@
+         <matches string="${java.version}" pattern="12((-.|\.\d).*)?"/>
+     </condition>
+ 
++    <property name="is.java8.plus" value="true"/>
+     <condition property="is.java8.plus">
+         <or>
+             <isset property="is.java8"/>
